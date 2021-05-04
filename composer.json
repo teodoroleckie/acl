@@ -1,0 +1,60 @@
+{
+  "name": "tleckie/acl",
+  "license": "MIT",
+  "description": "PHP role access control list (acl)",
+  "type": "library",
+  "homepage": "https://github.com/teodoroleckie/acl",
+  "authors": [
+    {
+      "name": "Teodoro Leckie Westberg",
+      "email": "teodoroleckie@gmail.com"
+    }
+  ],
+  "keywords": [
+    "tleckie",
+    "acl",
+    "php-acl",
+    "access-control-list",
+    "php-8",
+    "poo"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Tleckie\\Acl\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tleckie\\Acl\\Tests\\": "tests/"
+    }
+  },
+  "provide": {
+  },
+  "require": {
+    "php": "^8",
+    "tleckie/enum": "^1.0"
+  },
+  "require-dev": {
+    "infection/infection": "^0.21.5",
+    "phpunit/phpunit": "^9.5",
+    "friendsofphp/php-cs-fixer": "v3.0.0-beta.2"
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "vendor-dir": "vendor",
+    "bin-dir": "bin"
+  },
+  "scripts": {
+    "fix-src": "./bin/php-cs-fixer fix src/ ",
+    "fix-tests": "./bin/php-cs-fixer fix tests/",
+    "tests": "./bin/phpunit ./tests/",
+    "infection": "infection",
+    "check": [
+      "@fix-src",
+      "@fix-tests",
+      "@tests",
+      "@infection"
+    ]
+  }
+}

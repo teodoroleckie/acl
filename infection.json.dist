@@ -1,0 +1,27 @@
+{
+  "source": {
+    "directories": [
+      "./src"
+    ],
+    "excludes": [
+      "./vendor/"
+    ]
+  },
+  "phpUnit": {
+    "configDir": ".\/tests\/",
+    "customPath": ".\/bin\/phpunit"
+  },
+  "logs": {
+    "text": ".\/infection-report"
+  },
+  "mutators": {
+    "@default": true,
+    "ArrayOneItem": {
+            "ignore": [
+                "Tleckie\\Acl\\Acl::normalizeResourceCollection"
+            ]
+        }
+  },
+  "testFramework":"phpunit",
+  "bootstrap": "./vendor/autoload.php"
+}
