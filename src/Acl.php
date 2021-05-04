@@ -6,6 +6,7 @@ use Tleckie\Acl\Acl\AclInterface;
 use Tleckie\Acl\Acl\OperationEnum;
 use Tleckie\Acl\Acl\PermissionTypeEnum;
 use Tleckie\Acl\Acl\Register;
+use Tleckie\Acl\Acl\RegisterInterface;
 use Tleckie\Acl\Resource\ResourceFactory;
 use Tleckie\Acl\Resource\ResourceFactoryInterface;
 use Tleckie\Acl\Resource\ResourceInterface;
@@ -25,8 +26,8 @@ use Tleckie\Acl\Role\RoleRecorderInterface;
  */
 class Acl implements AclInterface
 {
-    /** @var Register */
-    protected Register $register;
+    /** @var RegisterInterface */
+    protected RegisterInterface $register;
 
     /** @var ResourceFactoryInterface */
     private ResourceFactoryInterface $resourceFactory;
