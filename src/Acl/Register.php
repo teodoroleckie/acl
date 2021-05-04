@@ -88,6 +88,7 @@ class Register implements RegisterInterface
         RoleInterface|string $role,
         array $parents = []
     ): RegisterInterface {
+
         $role = $this->roleRecorder->getRole($role);
 
         $this->initializeRule('roles', $role);

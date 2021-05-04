@@ -37,6 +37,7 @@ class ResourceRecorder implements ResourceRecorderInterface
         string|ResourceInterface $resource,
         array $parents = []
     ): ResourceRecorderInterface {
+
         if ($this->hasResource($resource)) {
             throw new InvalidArgumentException(
                 sprintf('Resource [%s] already exists', $resource)

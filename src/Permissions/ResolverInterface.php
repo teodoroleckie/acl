@@ -53,7 +53,9 @@ class ResolverInterface implements PermissionResolverInterface
         string $resource,
         string $privilege = null
     ): bool {
+
         $item = &$rules['roles'];
+
         if (isset($item[$role][$type][$resource][$privilege])) {
             return true;
         }
