@@ -47,7 +47,6 @@ class RemoveChain implements OperationChainInterface
         array $privileges,
         array &$rules
     ): OperationChainInterface {
-
         if ($operation === $operation::REMOVE()) {
             foreach ($roles as $role) {
                 $this->handleResources($resources, $privileges, $rules, $role, $type);
@@ -82,7 +81,6 @@ class RemoveChain implements OperationChainInterface
         string $roleId,
         string $typeId
     ): void {
-
         $items = &$rules['roles'];
 
         foreach ($resources as $resource) {
@@ -108,7 +106,6 @@ class RemoveChain implements OperationChainInterface
         string $typeId,
         string $resourceId
     ): void {
-
         $items = &$rules['roles'];
         foreach ($privileges as $privilege) {
             unset($items[$roleId][$typeId][$resourceId][$privilege]);

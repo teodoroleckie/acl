@@ -48,7 +48,6 @@ class AddChain implements OperationChainInterface
         array $privileges,
         array &$rules
     ): OperationChainInterface {
-
         if ($operation === $operation::ADD()) {
             $this->handleRoles($roles, $resources, $rules, $type, $privileges);
         }
@@ -81,7 +80,6 @@ class AddChain implements OperationChainInterface
         PermissionTypeEnum $type,
         array $privileges
     ): void {
-
         foreach ($roles as $role) {
             $this->handleResources($resources, $rules, $role, $type, $privileges);
         }
@@ -101,7 +99,6 @@ class AddChain implements OperationChainInterface
         PermissionTypeEnum $type,
         array $privileges
     ): void {
-
         $typeId = (string)$type;
         $items = &$rules['roles'];
 
@@ -136,7 +133,6 @@ class AddChain implements OperationChainInterface
         array $privileges,
         &$privilege
     ): void {
-
         $typeId = (string)$type;
         $items = &$rules['roles'];
 

@@ -49,10 +49,10 @@ class Acl implements AclInterface
      * @param RoleRecorderInterface|null     $roleRecorder
      */
     public function __construct(
-        ?ResourceFactoryInterface $resourceFactory = null,
-        ?RoleFactoryInterface $roleFactory = null,
-        ?ResourceRecorderInterface $resourceRecorder = null,
-        ?RoleRecorderInterface $roleRecorder = null,
+        ResourceFactoryInterface $resourceFactory = null,
+        RoleFactoryInterface $roleFactory = null,
+        ResourceRecorderInterface $resourceRecorder = null,
+        RoleRecorderInterface $roleRecorder = null,
     ) {
         $this->resourceFactory = $this->resolveResourceFactory($resourceFactory);
 
@@ -72,7 +72,6 @@ class Acl implements AclInterface
     private function resolveResourceFactory(
         ResourceFactoryInterface|null $resourceFactory
     ): ResourceFactoryInterface {
-
         return ($resourceFactory) ?: new ResourceFactory();
     }
 
@@ -83,7 +82,6 @@ class Acl implements AclInterface
     private function resolveRoleFactory(
         RoleFactoryInterface|null $roleFactory
     ): RoleFactoryInterface {
-
         return ($roleFactory) ?: new RoleFactory();
     }
 
@@ -94,7 +92,6 @@ class Acl implements AclInterface
     private function resolveResourceRecorder(
         ResourceRecorderInterface|null $resourceRecorder
     ): ResourceRecorderInterface {
-
         return ($resourceRecorder) ?: new ResourceRecorder($this->resourceFactory);
     }
 
@@ -105,7 +102,6 @@ class Acl implements AclInterface
     private function resolveRoleRecorder(
         RoleRecorderInterface|null $roleRecorder
     ): RoleRecorderInterface {
-
         return ($roleRecorder) ?: new RoleRecorder($this->roleFactory);
     }
 
@@ -173,7 +169,6 @@ class Acl implements AclInterface
         string|ResourceInterface $resource,
         array $parents = []
     ): AclInterface {
-
         $this->resourceRecorder->addResource($resource, $parents);
 
         return $this;
@@ -185,7 +180,6 @@ class Acl implements AclInterface
     public function getResource(
         ResourceInterface|string $resource
     ): ResourceInterface {
-
         return $this->resourceRecorder->getResource($resource);
     }
 
@@ -204,7 +198,6 @@ class Acl implements AclInterface
     public function removeResource(
         ResourceInterface|string $resource
     ): AclInterface {
-
         $this->resourceRecorder->removeResource($resource);
 
         $this->register->removeResource($resource);
@@ -235,7 +228,6 @@ class Acl implements AclInterface
         array $resources = [],
         array $privileges = []
     ): AclInterface {
-
         return $this->setRule(
             OperationEnum::REMOVE(),
             PermissionTypeEnum::DENY(),
@@ -260,7 +252,6 @@ class Acl implements AclInterface
         array $resources = [],
         array $privileges = []
     ): AclInterface {
-
         $this->register->setRule(
             $operation,
             $type,
@@ -311,7 +302,6 @@ class Acl implements AclInterface
         array $resources = [],
         array $privileges = []
     ): AclInterface {
-
         return $this->setRule(
             OperationEnum::REMOVE(),
             PermissionTypeEnum::ALLOW(),
@@ -332,7 +322,6 @@ class Acl implements AclInterface
         array $resources = [],
         array $privileges = []
     ): AclInterface {
-
         return $this->setRule(
             OperationEnum::ADD(),
             PermissionTypeEnum::ALLOW(),
@@ -353,7 +342,6 @@ class Acl implements AclInterface
         array $resources = [],
         array $privileges = []
     ): AclInterface {
-
         return $this->setRule(
             OperationEnum::ADD(),
             PermissionTypeEnum::DENY(),
@@ -371,7 +359,6 @@ class Acl implements AclInterface
         ResourceInterface|string $resource = null,
         string $privilege = null
     ): bool {
-
         return $this->register->isAllowed($role, $resource, $privilege);
     }
 
