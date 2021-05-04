@@ -64,12 +64,6 @@ class Resolver implements PermissionResolver
             }
         }
 
-//        foreach ($item[$role]['parents'] ?? [] as $parent => $value) {
-//            if ($this->check($type, $rules, $parent, $resource)) {
-//                return true;
-//            }
-//        }
-
         if (isset($item[$role][$type][$resource]) &&
             !count($item[$role][$type][$resource])) {
             return true;
