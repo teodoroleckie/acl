@@ -5,8 +5,6 @@ namespace Tleckie\Acl\Acl;
 use Tleckie\Acl\Operation\AddChain;
 use Tleckie\Acl\Operation\OperationChainInterface;
 use Tleckie\Acl\Operation\RemoveChain;
-use Tleckie\Acl\Permissions\AllowRule;
-use Tleckie\Acl\Permissions\DenyRule;
 use Tleckie\Acl\Permissions\PermissionResolverInterface;
 use Tleckie\Acl\Permissions\ResolverInterface;
 use Tleckie\Acl\Resource\ResourceInterface;

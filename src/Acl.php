@@ -6,8 +6,6 @@ use Tleckie\Acl\Acl\AclInterface;
 use Tleckie\Acl\Acl\OperationEnum;
 use Tleckie\Acl\Acl\PermissionTypeEnum;
 use Tleckie\Acl\Acl\Register;
-use Tleckie\Acl\Acl\RulesInterface;
-use Tleckie\Acl\Permissions\Permissions;
 use Tleckie\Acl\Resource\ResourceFactory;
 use Tleckie\Acl\Resource\ResourceFactoryInterface;
 use Tleckie\Acl\Resource\ResourceInterface;

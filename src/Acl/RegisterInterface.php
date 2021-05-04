@@ -2,8 +2,6 @@
 
 namespace Tleckie\Acl\Acl;
 
-use Tleckie\Acl\Permissions\AllowRule;
-use Tleckie\Acl\Permissions\DenyRule;
 use Tleckie\Acl\Resource\ResourceInterface;
 use Tleckie\Acl\Role\RoleInterface;
 
