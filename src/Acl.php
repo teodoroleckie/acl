@@ -62,7 +62,7 @@ class Acl implements AclInterface
 
         $this->roleRecorder = $this->resolveRoleRecorder($roleRecorder);
 
-        $this->register = new Register($this->roleRecorder, );
+        $this->register = new Register($this->roleRecorder);
     }
 
     /**
