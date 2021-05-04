@@ -1,6 +1,6 @@
 <?php
 
-namespace Tleckie\Acl\Tests\Resources;
+namespace Tleckie\Acl\Tests\Resource;
 
 use PHPUnit\Framework\TestCase;
 use Tleckie\Acl\Resource;

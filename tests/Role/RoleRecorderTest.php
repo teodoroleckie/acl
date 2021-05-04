@@ -1,6 +1,6 @@
 <?php
 
-namespace Tleckie\Acl\Tests\Roles;
+namespace Tleckie\Acl\Tests\Role;
 
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
