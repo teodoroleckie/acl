@@ -5,12 +5,12 @@ namespace Tleckie\Acl\Permissions;
 use Tleckie\Acl\Acl\PermissionTypeEnum;
 
 /**
- * Class Resolver
+ * Class ResolverInterface
  *
  * @package Tleckie\Acl\Permissions
  * @author  Teodoro Leckie Westberg <teodoroleckie@gmail.com>
  */
-class Resolver implements PermissionResolver
+class ResolverInterface implements PermissionResolverInterface
 {
     /**
      * @inheritdoc

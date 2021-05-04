@@ -7,8 +7,8 @@ use Tleckie\Acl\Operation\OperationChainInterface;
 use Tleckie\Acl\Operation\RemoveChain;
 use Tleckie\Acl\Permissions\AllowRule;
 use Tleckie\Acl\Permissions\DenyRule;
-use Tleckie\Acl\Permissions\PermissionResolver;
-use Tleckie\Acl\Permissions\Resolver;
+use Tleckie\Acl\Permissions\PermissionResolverInterface;
+use Tleckie\Acl\Permissions\ResolverInterface;
 use Tleckie\Acl\Resource\ResourceInterface;
 use Tleckie\Acl\Role\RoleInterface;
 use Tleckie\Acl\Role\RoleRecorderInterface;
@@ -30,8 +30,8 @@ class Register implements RegisterInterface
     /** @var OperationChainInterface */
     private OperationChainInterface $operations;
 
-    /** @var PermissionResolver */
-    private PermissionResolver $resolver;
+    /** @var PermissionResolverInterface */
+    private PermissionResolverInterface $resolver;
 
     /**
      * Register constructor.
@@ -44,7 +44,7 @@ class Register implements RegisterInterface
 
         $this->operations = (new RemoveChain(new AddChain()));
 
-        $this->resolver = new Resolver();
+        $this->resolver = new ResolverInterface();
 
         $this->rules = [];
     }

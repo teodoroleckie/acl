@@ -3,12 +3,12 @@
 namespace Tleckie\Acl\Permissions;
 
 /**
- * Interface PermissionResolver
+ * Interface PermissionResolverInterface
  *
  * @package Tleckie\Acl\Permissions
  * @author  Teodoro Leckie Westberg <teodoroleckie@gmail.com>
  */
-interface PermissionResolver
+interface PermissionResolverInterface
 {
     /**
      * @param array       $rules

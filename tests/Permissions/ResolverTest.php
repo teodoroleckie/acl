@@ -3,12 +3,12 @@
 namespace Tleckie\Acl\Tests\Permissions;
 
 use PHPUnit\Framework\TestCase;
-use Tleckie\Acl\Permissions\Resolver;
+use Tleckie\Acl\Permissions\ResolverInterface;
 
 class ResolverTest extends TestCase
 {
-    /** @var Resolver */
-    private Resolver $resolver;
+    /** @var ResolverInterface */
+    private ResolverInterface $resolver;
 
     private array $rules = [
         'roles' => [
@@ -40,7 +40,7 @@ class ResolverTest extends TestCase
 
     public function setUp(): void
     {
-        $this->resolver = new Resolver();
+        $this->resolver = new ResolverInterface();
     }
 
     /**
