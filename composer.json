@@ -1,7 +1,7 @@
 {
   "name": "tleckie/acl",
   "license": "MIT",
-  "description": "PHP role access control list (acl)",
+  "description": "PHP role access control list (acl). Acl component provides a lightweight and flexible access control list (ACL) implementation for privileges management. ",
   "type": "library",
   "homepage": "https://github.com/teodoroleckie/acl",
   "authors": [
